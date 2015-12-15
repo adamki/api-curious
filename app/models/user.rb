@@ -18,4 +18,9 @@ class User < ActiveRecord::Base
 
     user
   end
+
+
+  def twitter_client
+    @service ||= TwitterService.new(self)
+  end
 end

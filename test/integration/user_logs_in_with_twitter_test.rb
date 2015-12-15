@@ -1,6 +1,7 @@
 require "test_helper"
 
 class UserLogsInWithTwitterTest < ActionDispatch::IntegrationTest
+  include Capybara::DSL
 
   def setup
     Capybara.app = OauthWorkshop::Application
@@ -35,7 +36,7 @@ class UserLogsInWithTwitterTest < ActionDispatch::IntegrationTest
     visit "/"
     assert_equal 200, page.status_code
     click_link "Login with Twitter"
-    assert_equal "/", current_path
+    assert_equal users_path, current_path
     assert page.has_content?("worace")
     assert page.has_link?("Sign Out")
   end
