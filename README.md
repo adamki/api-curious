@@ -1,5 +1,5 @@
 # API-curious
-
+[![Throughput Graph](https://graphs.waffle.io/adamki/api-curious/throughput.svg)](https://waffle.io/adamki/api-curious/metrics)
 This is the first individual project of Module 3 at the Turing School. Students have to use an API, in this case Github, to build a clone of said platform.
 The backend is Rails.
 
