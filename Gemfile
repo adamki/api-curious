@@ -9,8 +9,14 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem "omniauth-twitter"
+gem 'better_errors'
+
+
+gem 'omniauth-twitter'
 gem 'figaro'
+
+gem 'foundation-rails'
+gem 'binding_of_caller'
 
 group :development, :test do
   gem 'capybara'
@@ -22,3 +28,8 @@ group :development do
   gem 'spring'
 end
 
+
+group :production do
+  gem 'rails_12factor'
+  gem "better_errors"
+end
