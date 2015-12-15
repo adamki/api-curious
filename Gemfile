@@ -21,6 +21,10 @@ gem 'binding_of_caller'
 group :development, :test do
   gem 'capybara'
   gem 'byebug'
+  gem 'pry'
+  gem 'simplecov'
+  gem 'mocha'
+  gem 'launchy'
 end
 
 group :development do

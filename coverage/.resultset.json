@@ -1,0 +1,64 @@
+{
+  "MiniTest": {
+    "coverage": {
+      "/Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/models/user.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/controllers/welcome_controller.rb": [
+        1,
+        null
+      ],
+      "/Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        5,
+        null,
+        null
+      ],
+      "/Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/helpers/sessions_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/helpers/welcome_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/controllers/sessions_controller.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1450153595
+  }
+}

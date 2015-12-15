@@ -1,1 +1,9 @@
-<h1>Welcome!</h1>
+<% if current_user %>
+  <div class="row">
+    <div class="col-xs-6 col-md-4 center">
+      <%= render partial: "user_summary"%>
+    </div>
+    <div class="col-xs-6 col-md-4 center"></div>
+    <div class="col-xs-6 col-md-4 center"></div>
+  </div>
+<% end %>
