@@ -10,12 +10,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'better_errors'
 
-
 gem 'omniauth-twitter'
 gem 'figaro'
 
 gem 'bootstrap-sass', '~> 3.3.6'
-
 gem 'binding_of_caller'
 
 group :development, :test do
@@ -31,7 +29,6 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
-
 
 group :production do
   gem 'rails_12factor'
