@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '4.2.5'
 gem 'pg', '~> 0.15'
 gem 'sass-rails', '~> 5.0'
@@ -15,7 +14,8 @@ gem 'better_errors'
 gem 'omniauth-twitter'
 gem 'figaro'
 
-gem 'foundation-rails'
+gem 'bootstrap-sass', '~> 3.3.6'
+
 gem 'binding_of_caller'
 
 group :development, :test do
