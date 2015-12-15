@@ -1,10 +1,10 @@
-# git-curious
+# API-curious
 
 This is the first individual project of Module 3 at the Turing School. Students have to use an API, in this case Github, to build a clone of said platform.
 The backend is Rails.
 
 ##Getting Started:
-* clone this project `git@github.com:adamki/git-curious.git`
+* clone this project `git@github.com:adamki/api-curious.git`
 * run `bundle`
 * start the DB `rake db:migrate`
 * run on `localhost:3000`
@@ -18,5 +18,5 @@ The backend is Rails.
 
 ## Technical Expectations
 * Use an Omniauth authentication library for authenticating users from the third-party service.
-* Mimic the interface of functionality of chosen third-party, in this case Github.
+* Mimic the interface of functionality of chosen third-party, in this case Twitter.
 * Consume an external API to get real data and interact with a third-party service.
