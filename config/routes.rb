@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "dashboard", to: "dashboard#show"
 
   post "tweets", to: "tweets#create"
+  post "favorites", to: "tweets#favorite"
 
   get "logout" => "sessions#destroy", as: :logout
 end

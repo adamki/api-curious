@@ -36,6 +36,7 @@ class User < ActiveRecord::Base
            :followers_count,
            :following_count,
            :total_tweets,
+           :favorite_tweet,
            :banner_image, to: :twitter_client
   
 end
