@@ -1,7 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+@import "welcome";
 @import "header";
+@import "dashboard";
 
 // *{
 //   border: 1px tomato solid;
 // }
+

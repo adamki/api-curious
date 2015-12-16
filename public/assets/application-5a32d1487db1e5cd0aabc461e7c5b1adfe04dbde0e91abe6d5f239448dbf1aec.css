@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url(http://oss.maxcdn.com/libs/animate.css/2.0/animate.min.css);
 /* line 9, /Users/adamjensen/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_normalize.scss */
 html {
   font-family: sans-serif;
@@ -8791,12 +8792,60 @@ button.close {
     display: none !important;
   }
 }
+/* line 3, /Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/assets/stylesheets/welcome.scss */
+#wrap {
+  width: 100%;
+  height: 800px;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  background: #222222 url("http://cdn.clemensotto.com/codepen/img/1.jpg") no-repeat top center fixed;
+  background-size: cover;
+  font-family: sans-serif;
+}
+
+/* line 14, /Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/assets/stylesheets/welcome.scss */
+h1 {
+  font-size: 60px;
+  font-weight: lightest;
+  color: #fff;
+  text-shadow: 0 1px 4px #000;
+}
+
+/* line 21, /Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/assets/stylesheets/welcome.scss */
+#box {
+  position: fixed;
+  width: 500px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -250px;
+  text-align: center;
+  -webkit-animation-name: bounceInDown;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: bounceInDown;
+  -moz-animation-fill-mode: both;
+  -moz-animation-duration: 1.5s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: linear;
+  animation-name: bounceInDown;
+  animation-fill-mode: both;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
 /* line 2, /Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/assets/stylesheets/header.scss */
 .navbar {
   position: relative;
+  margin-bottom: 0px;
 }
 
-/* line 5, /Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/assets/stylesheets/header.scss */
+/* line 7, /Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/assets/stylesheets/header.scss */
 .brand {
   position: absolute;
   left: 50%;
@@ -8805,14 +8854,14 @@ button.close {
   display: block;
 }
 
-/* line 13, /Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/assets/stylesheets/header.scss */
+/* line 15, /Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/assets/stylesheets/header.scss */
 .logo-responsive {
   padding-top: 12px;
   max-width: 30px;
   height: auto;
 }
 
-/* line 19, /Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/assets/stylesheets/header.scss */
+/* line 21, /Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/assets/stylesheets/header.scss */
 .search-input {
   display: block;
   -moz-box-sizing: border-box;
@@ -8829,7 +8878,13 @@ button.close {
   transition: all .2s ease-in-out;
 }
 
-/* line 35, /Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/assets/stylesheets/header.scss */
+/* line 37, /Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/assets/stylesheets/header.scss */
 .twitter-share-button {
   margin-top: 11px;
+}
+
+/* line 5, /Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/assets/stylesheets/dashboard.scss */
+.twitter-thumbnail {
+  margin: 5px, 15px;
+  border-radius: 3px;
 }
