@@ -18,5 +18,21 @@ class TwitterService
     client.update(tweet)
   end
 
+  def followers_count
+    client.user.followers_count
+  end
+
+  def following_count
+    client.user.friends_count
+  end
+
+  def total_tweets
+    client.user.tweets_count
+  end
+
+  def banner_image
+    client.user.profile_banner_uri_https(size = :web).to_s
+  end
+
 
 end
