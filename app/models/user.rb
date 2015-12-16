@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+
+  #attr_reader :service
+
   def self.from_omniauth(auth)
     user = find_or_create_by(uid: auth[:uid])
     user.update_attributes(
@@ -23,6 +26,16 @@ class User < ActiveRecord::Base
     @service ||= TwitterService.new(self)
   end
 
-  delegate :timeline, :new_tweet, to: :twitter_client
+  #def total_tweets
+    #service.total_tweets
+  #end
+
+
+  delegate :timeline,
+           :new_tweet,
+           :followers_count,
+           :following_count,
+           :total_tweets,
+           :banner_image, to: :twitter_client
   
 end
