@@ -22,10 +22,19 @@
         null,
         1,
         null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
         null
       ],
       "/Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/controllers/welcome_controller.rb": [
         1,
+        1,
+        null,
         null
       ],
       "/Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/controllers/application_controller.rb": [
@@ -37,11 +46,16 @@
         1,
         null,
         1,
-        6,
+        4,
+        null,
         null,
         null
       ],
       "/Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/helpers/dashboard_helper.rb": [
         1,
         null
       ],
@@ -58,8 +72,10 @@
         1,
         1,
         1,
-        null,
         1,
+        null,
+        0,
+        null,
         null,
         null,
         1,
@@ -67,8 +83,34 @@
         0,
         null,
         null
+      ],
+      "/Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/controllers/dashboard_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/services/twitter_service.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1450157885
+    "timestamp": 1450218234
   }
 }

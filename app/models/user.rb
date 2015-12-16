@@ -18,4 +18,11 @@ class User < ActiveRecord::Base
 
     user
   end
+
+  def twitter_client
+    @service ||= TwitterService.new(self)
+  end
+
+  delegate :timeline, :new_tweet, to: :twitter_client
+  
 end

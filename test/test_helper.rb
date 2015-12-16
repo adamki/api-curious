@@ -5,6 +5,7 @@ require 'minitest/pride'
 require "capybara/rails"
 require "mocha/mini_test"
 require "pry"
+
 SimpleCov.start "rails"
 
 class ActiveSupport::TestCase
@@ -13,4 +14,5 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+
 end
