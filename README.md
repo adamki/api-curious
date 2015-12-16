@@ -1,12 +1,9 @@
 # API-curious
 [![Throughput Graph](https://graphs.waffle.io/adamki/api-curious/throughput.svg)](https://waffle.io/adamki/api-curious/metrics)
 [![Stories in Ready](https://badge.waffle.io/adamki/api-curious.svg?label=ready&title=Ready)](http://waffle.io/adamki/api-curious)
-Delete adamki/api-curious
-Deleting a project will remove all of its data from waffle.io and unregister its webhooks to GitHub. Deleting a project will not affect any data in the GitHub repos that are connected to it.
 
-Enter "adamki/api-curious" to confirm delete
-This is the first individual project of Module 3 at the Turing School. Students have to use an API, in this case Github, to build a clone of said platform.
-The backend is Rails.
+This is the first individual project of Module 3 at the Turing School. Students have to use an API, in this case Twitter, to build a clone of said platform.
+The backend is entirely Rails.
 
 ##Getting Started:
 * clone this project `git@github.com:adamki/api-curious.git`
