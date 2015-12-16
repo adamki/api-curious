@@ -11,7 +11,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'better_errors'
 
 gem 'twitter'
-
 gem 'omniauth-twitter'
 gem 'figaro'
 
