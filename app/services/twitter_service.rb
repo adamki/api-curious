@@ -34,5 +34,9 @@ class TwitterService
     client.user.profile_banner_uri_https(size = :web).to_s
   end
 
+  def favorite_tweet(id)
+    client.favorite(id)
+  end
+
 
 end
