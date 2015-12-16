@@ -10,4 +10,12 @@ class TwitterService
     end
   end
 
+  def timeline
+    client.home_timeline
+  end
+
+  def new_tweet(tweet)
+    client.update(tweet)
+  end
+
 end
