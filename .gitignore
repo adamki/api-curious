@@ -12,6 +12,7 @@
 !/log/.keep
 /tmp
 .byebug_history
+/test/cassettes
 
 # Ignore application configuration
 /config/application.yml
