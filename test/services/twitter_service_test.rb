@@ -47,5 +47,13 @@ class TwitterServiceTest < ActiveSupport::TestCase
       assert_equal url, service.banner_image
     end
   end
+
+  test "#retweet" do
+    VCR.use_cassette("Twitter_Service#retweet") do
+      retweets = service.retweet(677380359894335488)
+      retweet = retweets.first
+      assert_equal Twitter::Tweet, retweet.class
+    end
+  end
 end
 
