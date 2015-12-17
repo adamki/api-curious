@@ -1,11 +1,10 @@
 <%= form_tag tweets_path, method: :post do %>
   <%= text_area_tag :tweet, "",
-    class: "form-control input-xxlarge", 
-    placeholder: "What's Happening?", 
-    maxlength: 140, 
-    size: 30 
+    class: "form-control input-xxlarge",
+    placeholder: "What's Happening?",
+    maxlength: 140,
+    size: 30
   %>
 
-  <%= submit_tag "Tweet", class: "right" %>
+  <%= submit_tag "Tweet", class: "right", id: "new-tweet-submit" %>
 <% end %>
-

@@ -5,49 +5,41 @@
       <% current_user.timeline.each do | tweet | %>
         <a class="list-group-item hover">
           <div class ="pull-left twitter-thumbnail">
-            <img src="<%= tweet.user.profile_image_uri %>"/>
+            <img src="<%= tweet.user.profile_image_uri %>" class="timeline-picture"/>
           </div>
 
           <div class = "right">
             <strong><%= tweet.user.name %></strong> @<%= tweet.user.screen_name %><br/>
             <%= tweet.full_text %>
-
           </div>
 
-          <span>
+          <%= link_to "Favorite this Tweet", favorites_path(:tweet_id => tweet.id), method: :post, class: "btn btn-primary btn-sm" %>   |
+          <%= link_to "Retweet", retweet_path(:tweet_id => tweet.id), method: :post, class: "btn btn-primary btn-sm" %>   |
 
-            <%= link_to "Favorite this Tweet", favorites_path(:tweet_id => tweet.id), method: :post %> |
-            <%= link_to "Retweet", retweet_path(:tweet_id => tweet.id), method: :post %> |
-            
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Reply</button>
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="exampleModalLabel">Reply to this Tweet</h4>
-                  </div>
-                  <div class="modal-body">
-                    <%#<form>%>
-                      <%= form_tag reply_path(:tweet_id => tweet.id), method: :post, class: "form-group" do %>
-                      <div class="form-group">
-                        <label for="message-text" class="control-label">Message:</label>
-                        <%= text_area_tag :tweet, "", class: "form-control", id: "message-text" %>
+          <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Reply</button>
 
-                        <%= submit_tag "REPLY", class: "btn btn-primary" %>
-                      <% end %>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                  </div>
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="exampleModalLabel">Reply to this Tweet</h4>
+                </div>
+                <div class="modal-body">
+                    <%= form_tag reply_path(:tweet_id => tweet.id), method: :post, class: "form-group" do %>
+                    <div class="form-group">
+                      <label for="message-text" class="control-label">Message:</label>
+                      <%= text_area_tag :tweet, "", class: "form-control", id: "message-text" %>
+                      <%= submit_tag "REPLY", class: "btn btn-primary" %>
+                    <% end %>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
-
-          </span>
-      <% end %>
+          </div>
+        <% end %>
+      </a>
     </ul>
-
   </div>
 </div>
