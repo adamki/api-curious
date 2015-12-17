@@ -34,7 +34,7 @@ class UserLogsInWithTwitterTest < ActionDispatch::IntegrationTest
   end
 
   test "logging in" do
-    VCR.use_cassette("dashboard#show") do
+    VCR.use_cassette("dashboard#showw") do
       visit "/"
       assert_equal 200, page.status_code
       
@@ -42,10 +42,14 @@ class UserLogsInWithTwitterTest < ActionDispatch::IntegrationTest
 
       assert_equal dashboard_path, current_path
       assert page.has_link?("Sign Out")
-      assert page.has_content?("Tweets: 5")
+      assert page.has_content?("Tweets: 8")
       assert page.has_content?("@adamkijensen")
-      assert page.has_content?("Followers: 11")
+      assert page.has_content?("Followers: 12")
       assert page.has_content?("Following: 0")
+
+      click_link "Sign Out"
+
+      assert_equal root_path, current_path
     end
   end
 end
