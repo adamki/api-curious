@@ -11,35 +11,42 @@ class UserLogsInWithTwitterTest < ActionDispatch::IntegrationTest
   def stub_omniauth
     OmniAuth.config.test_mode = true
     OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new({
+      uid: "3198489685",
       provider: 'twitter',
       info: {
-        description: 'Horace is The Worace.',
-        image: 'http://image.com',
-        location: 'Denver CO',
+        description: 'bob rules',
+        image: 'http://pbs.twimg.com/profile_images/599783079217995777/T4tmMdpB_normal.jpg',
+        location: 'Denver, CO',
       },
       extra: {
         raw_info: {
           user_id: '1234',
-          name: 'Horace',
-          screen_name: 'worace',
-          profile_background_image_url: 'fdsafdsa',
+          name: 'bob',
+          screen_name: 'adamkijensen',
+          profile_background_image_url: 'http://abs.twimg.com/images/themes/theme1/bg.png',
         }
       },
       credentials: {
-        token: 'pizza',
-        secret: 'secretpizza'
+        token: ENV["test_token"], 
+        secret: ENV["test_secret"] 
       }
     })
   end
 
   test "logging in" do
-    VCR.use_cassette("user_logs_in") do
+    VCR.use_cassette("dashboard#show") do
       visit "/"
       assert_equal 200, page.status_code
+      
       click_link "Login with Twitter"
+
       assert_equal dashboard_path, current_path
-      assert page.has_content?("worace")
+      save_and_open_page
       assert page.has_link?("Sign Out")
+      assert page.has_content?("Tweets: 5")
+      assert page.has_content?("@adamkijensen")
+      assert page.has_content?("Followers: 11")
+      assert page.has_content?("Following: 0")
     end
   end
 end

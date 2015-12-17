@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-
   #attr_reader :service
 
   def self.from_omniauth(auth)

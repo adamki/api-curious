@@ -15,4 +15,12 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
 
+  VCR.configure do |config|
+    config.cassette_library_dir = 'test/cassettes'
+    config.hook_into :webmock
+    config.default_cassette_options = {:serialize_with => :json}
+    config.before_record do |r|
+      r.request.headers.delete("Authorization")
+    end
+  end
 end
