@@ -41,7 +41,6 @@ class UserLogsInWithTwitterTest < ActionDispatch::IntegrationTest
       click_link "Login with Twitter"
 
       assert_equal dashboard_path, current_path
-      save_and_open_page
       assert page.has_link?("Sign Out")
       assert page.has_content?("Tweets: 5")
       assert page.has_content?("@adamkijensen")
