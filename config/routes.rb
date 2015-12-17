@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   post "tweets", to: "tweets#create"
   post "retweet", to: "tweets#retweet"
+  post "reply", to: "tweets#reply"
   post "favorites", to: "tweets#favorite"
 
   get "logout" => "sessions#destroy", as: :logout

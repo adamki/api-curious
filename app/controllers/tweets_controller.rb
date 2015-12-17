@@ -18,4 +18,9 @@ class TweetsController < ApplicationController
     flash[:success] = "This Retweet has been completed"
     redirect_to :back
   end
+  
+  def reply
+    current_user.reply(params[:tweet_id], params[:tweet])
+    redirect_to :back
+  end
 end

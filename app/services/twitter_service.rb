@@ -41,4 +41,19 @@ class TwitterService
   def retweet(id)
     client.retweet(id)
   end
+
+  def reply(id, tweet_message)
+    tweet = find_tweet(id)
+    screen_name = find_user_by_tweet(tweet.id).screen_name
+    client.update("@#{screen_name} #{tweet_message}")
+  end
+
+  def find_tweet(id)
+    client.status(id)
+  end
+
+  def find_user_by_tweet(id)
+    client.status(id).user
+  end
+  
 end

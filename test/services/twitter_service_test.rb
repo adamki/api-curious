@@ -48,11 +48,37 @@ class TwitterServiceTest < ActiveSupport::TestCase
     end
   end
 
+  test "#favorite_tweet" do
+    VCR.use_cassette("Twitter_Service#favorite_tweet") do
+      favorite_tweets = service.favorite_tweet(677406834261549056)
+      favorite_tweet = favorite_tweets.first
+
+      assert_equal Array, favorite_tweets.class 
+      assert_equal 1, favorite_tweets.count 
+    end
+  end
+
   test "#retweet" do
     VCR.use_cassette("Twitter_Service#retweet") do
       retweets = service.retweet(677380359894335488)
       retweet = retweets.first
       assert_equal Twitter::Tweet, retweet.class
+    end
+  end
+
+  test "#find_tweet" do
+    VCR.use_cassette("Twitter_Service#find_tweet") do
+      tweet = service.find_tweet(677412314962759680)
+      assert_equal Twitter::Tweet, tweet.class
+      tweet_message = "@adamkijensen fsdafdas"
+      assert_equal tweet_message, tweet.full_text
+    end
+  end
+
+  test "#find_user_by_tweet" do
+    VCR.use_cassette("Twitter_Service#find_user_by_tweet") do
+      user = service.find_user_by_tweet(677412314962759680)
+      assert_equal "adamkijensen", user.screen_name
     end
   end
 end
