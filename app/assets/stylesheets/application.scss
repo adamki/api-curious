@@ -4,61 +4,15 @@
 @import "welcome";
 @import "header";
 @import "dashboard";
+@import "tweet-input";
+@import "timeline";
+@import "user-summary";
 
 // *{
 //   border: 1px tomato solid;
 // }
 
+//I hate round buttons.
 .btn {
   border-radius: 0px;
-}
-
-
-// new tweet styling
-
-textarea#tweet {
-  margin-top: 50px;
-}
-
-// time line styling
-.timeline-picture {
-  margin-right: 10px;
-  margin-bottom: 20px;
-}
-
-.list-group-item {
-  border: 1px white solid;
-}
-
-#new-tweet-submit{
-  margin: 20px 0px 20px 200px;
-}
-
-
-// user summary box
-#user-summary-box {
-  padding-left: 30px;
-  padding-top: 50px;
-}
-
-#banner-image {
-  width: 100%;
-}
-
-.pull-right {
-  width: 75%;
-}
-
-.pull-left {
-  width: 25%;
-  padding-left: 30px;
-}
-
-#users-photo{
-  margin-top: 10px;
-  width: 70px;
-}
-
-#profile-bg{
-  width: 90%;
 }
