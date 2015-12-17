@@ -4,11 +4,15 @@
 @import "welcome";
 @import "header";
 @import "dashboard";
+@import "tweet-input";
+@import "timeline";
+@import "user-summary";
 
 // *{
 //   border: 1px tomato solid;
 // }
 
+//I hate round buttons.
 .btn {
   border-radius: 0px;
 }
