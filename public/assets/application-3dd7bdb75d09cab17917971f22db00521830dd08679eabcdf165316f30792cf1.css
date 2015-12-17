@@ -8824,17 +8824,17 @@ h1 {
   text-align: center;
   -webkit-animation-name: bounceInDown;
   -webkit-animation-fill-mode: both;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 3.5s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: linear;
   -moz-animation-name: bounceInDown;
   -moz-animation-fill-mode: both;
-  -moz-animation-duration: 1.5s;
-  -moz-animation-iteration-count: 1;
+  -moz-animation-duration: 3.5s;
+  -moz-animation-iteration-count: 2;
   -moz-animation-timing-function: linear;
   animation-name: bounceInDown;
   animation-fill-mode: both;
-  animation-duration: 1.5s;
+  animation-duration: 3.5s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
 }
@@ -8848,7 +8848,7 @@ h1 {
 /* line 7, /Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/assets/stylesheets/header.scss */
 .brand {
   position: absolute;
-  left: 50%;
+  left: 53%;
   margin-left: -50px !important;
   /* 50% of your logo width */
   display: block;
@@ -8887,4 +8887,63 @@ h1 {
 .twitter-thumbnail {
   margin: 5px, 15px;
   border-radius: 3px;
+}
+
+/* line 3, /Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/assets/stylesheets/tweet-input.scss */
+textarea#tweet {
+  margin-top: 50px;
+}
+
+/* line 2, /Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/assets/stylesheets/timeline.scss */
+.timeline-picture {
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+/* line 7, /Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/assets/stylesheets/timeline.scss */
+.list-group-item {
+  border: 1px white solid;
+}
+
+/* line 11, /Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/assets/stylesheets/timeline.scss */
+#new-tweet-submit {
+  margin: 20px 0px 20px 200px;
+}
+
+/* line 3, /Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/assets/stylesheets/user-summary.scss */
+#user-summary-box {
+  padding-left: 30px;
+  padding-top: 50px;
+}
+
+/* line 8, /Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/assets/stylesheets/user-summary.scss */
+#banner-image {
+  width: 100%;
+}
+
+/* line 12, /Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/assets/stylesheets/user-summary.scss */
+.pull-right {
+  width: 75%;
+}
+
+/* line 16, /Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/assets/stylesheets/user-summary.scss */
+.pull-left {
+  width: 25%;
+  padding-left: 30px;
+}
+
+/* line 21, /Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/assets/stylesheets/user-summary.scss */
+#users-photo {
+  margin-top: 10px;
+  width: 70px;
+}
+
+/* line 26, /Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/assets/stylesheets/user-summary.scss */
+#profile-bg {
+  width: 90%;
+}
+
+/* line 16, /Users/adamjensen/Turing/m3.1/w3/api-curious-v2/app/assets/stylesheets/application.scss */
+.btn {
+  border-radius: 0px;
 }
